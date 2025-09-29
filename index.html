@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR AI Applications Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Professional business color palette: Indigo + Gray -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',    // Deep indigo (professional base)
+                        secondary: '#3B82F6',  // Bright blue (interactive elements)
+                        accent: '#F97316',     // Orange (key action points)
+                        dark: '#1E293B',       // Slate dark (text)
+                        light: '#F8FAFC',      // Slate light (background)
+                        muted: '#64748B',      // Slate muted (secondary text)
+                        'card-bg': '#FFFFFF',  // Card background
+                        'talent': '#EFF6FF',   // Talent category bg
+                        'learning': '#F0F9FF', // Learning category bg
+                        'performance': '#FEF2F2'// Performance category bg
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.06)',
+                        'hover': '0 10px 30px rgba(30, 64, 175, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-transition {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-transition:hover {
+                transform: translateY(-6px);
+            }
+            .bg-subtle-pattern {
+                background-image: radial-gradient(rgba(30, 64, 175, 0.03) 1px, transparent 1px);
+                background-size: 24px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans text-dark min-h-screen bg-subtle-pattern">
+    <!-- Header with only logo (removed search, notifications, and user profile) -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo & Title (Professional Aesthetic) -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-primary text-white p-2.5 rounded-xl">
+                        <i class="fa fa-briefcase text-xl"></i>
+                    </div>
+                    <h1 class="text-xl font-bold text-primary">HR AI Portal</h1>
+                </div>
+                
+                <!-- Removed: Search, Notifications, and User Profile sections -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Clean & Professional) -->
+    <section class="pt-32 pb-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-4 leading-tight">
+                    AI-Powered HR Solutions
+                </h2>
+                <p class="text-muted text-lg">Streamline PX management with professional AI tools tailored for modern HR workflows</p>
+            </div>
+            
+            <!-- Category Filters (Business-Centric Design) -->
+            <div class="mb-12 overflow-x-auto pb-2">
+                <div class="flex space-x-3 min-w-max justify-center">
+                    <button class="category-btn active px-6 py-3 bg-primary text-white rounded-full text-sm font-medium shadow-soft transition-all">
+                        All Applications
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white text-dark rounded-full text-sm font-medium shadow-soft hover:shadow-md transition-all">
+                        Talent Acquisition
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white text-dark rounded-full text-sm font-medium shadow-soft hover:shadow-md transition-all">
+                        Learning & Development
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white text-dark rounded-full text-sm font-medium shadow-soft hover:shadow-md transition-all">
+                        Performance Evaluation
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Applications Grid (Structured & Professional) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Talent Acquisition - JD Generator -->
+                <a href="https://app-llm.digitalvolvo.com/workflow/kqAqYImH7HoCgMjX" target="_blank" class="app-card" data-category="Talent Acquisition">
+                    <div class="bg-talent rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-5 shadow-sm">
+                            <i class="fa fa-file-text-o text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">JD Generator</h3>
+                        <p class="text-muted text-sm mb-5 flex-grow">Create comprehensive, role-specific job descriptions with industry benchmarks</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Talent Acquisition</span>
+                            <i class="fa fa-arrow-right text-primary/70"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Talent Acquisition - Interview Script -->
+                <a href="https://app-llm.digitalvolvo.com/workflow/JnxJIPpTXtThWUAK" target="_blank" class="app-card" data-category="Talent Acquisition">
+                    <div class="bg-talent rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-5 shadow-sm">
+                            <i class="fa fa-comments text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Interview Script</h3>
+                        <p class="text-muted text-sm mb-5 flex-grow">Generate structured interview questions aligned with role competencies</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Talent Acquisition</span>
+                            <i class="fa fa-arrow-right text-primary/70"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Learning and Development - AI Coaching -->
+                <a href="https://app-llm.digitalvolvo.com/chat/pU09Bai2QCFBgb4v" target="_blank" class="app-card" data-category="Learning & Development">
+                    <div class="bg-learning rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-5 shadow-sm">
+                            <i class="fa fa-graduation-cap text-2xl text-secondary"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">AI Coaching</h3>
+                        <p class="text-muted text-sm mb-5 flex-grow">Deliver personalized coaching sessions and development feedback</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full">Learning & Development</span>
+                            <i class="fa fa-arrow-right text-secondary/70"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Learning and Development - AI Skill Assessment -->
+                <a href="https://app-llm.digitalvolvo.com/chat/Mj3SyvQyvoLyCe26" target="_blank" class="app-card" data-category="Learning & Development">
+                    <div class="bg-learning rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-5 shadow-sm">
+                            <i class="fa fa-check-square-o text-2xl text-secondary"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">AI Skill Assessment</h3>
+                        <p class="text-muted text-sm mb-5 flex-grow">Evaluate employee skills with data-driven assessments and reports</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full">Learning & Development</span>
+                            <i class="fa fa-arrow-right text-secondary/70"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Performance Evaluation - Priority and Development Plan -->
+                <a href="https://app-llm.digitalvolvo.com/chat/HL0kzxOhazcUWO3B" target="_blank" class="app-card" data-category="Performance Evaluation">
+                    <div class="bg-performance rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-5 shadow-sm">
+                            <i class="fa fa-line-chart text-2xl text-accent"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Priority & Development Plan</h3>
+                        <p class="text-muted text-sm mb-5 flex-grow">Identify priorities and build personalized development plans from performance data</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-accent/10 text-accent text-xs px-3 py-1 rounded-full">Performance Evaluation</span>
+                            <i class="fa fa-arrow-right text-accent/70"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Add New Application Button (Admin Only) -->
+                <div id="addAppBtn" class="bg-white rounded-xl p-6 shadow-soft card-transition hover:shadow-hover h-full flex flex-col items-center justify-center border-2 border-dashed border-primary/30 hover:border-primary/60 transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fa fa-plus text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-primary">Add New Application</h3>
+                    <p class="text-muted text-sm text-center">Integrate Dify-developed tools to the portal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add New Application Modal (Business Style) -->
+    <div id="addAppModal" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 w-full max-w-md shadow-lg transform transition-all">
+            <div class="flex justify-between items-center mb-5">
+                <h3 class="text-xl font-bold text-primary">Add New Application</h3>
+                <button id="closeModal" class="text-muted hover:text-primary transition-colors">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <form id="addAppForm">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1.5 text-dark">Application Name</label>
+                    <input type="text" class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition" placeholder="Enter application name">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1.5 text-dark">Application URL</label>
+                    <input type="url" class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition" placeholder="https://your-app-url.com">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1.5 text-dark">Description</label>
+                    <textarea class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition" rows="3" placeholder="Briefly describe the application's purpose"></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-1.5 text-dark">Category</label>
+                    <select class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition">
+                        <option value="">Select a category</option>
+                        <option value="Talent Acquisition">Talent Acquisition</option>
+                        <option value="Learning & Development">Learning & Development</option>
+                        <option value="Performance Evaluation">Performance Evaluation</option>
+                    </select>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button type="button" id="cancelAdd" class="flex-1 px-4 py-2.5 border border-gray-200 rounded-lg text-dark font-medium hover:bg-gray-50 transition-colors">Cancel</button>
+                    <button type="submit" class="flex-1 px-4 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">Add Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Role-based access control implementation
+            const userRole = 'HR Admin'; // Change to 'Employee' to test restriction
+            
+            // Show/hide add application functionality based on role
+            const addAppBtn = document.getElementById('addAppBtn');
+            if (userRole !== 'HR Admin') {
+                addAppBtn.style.display = 'none';
+            }
+            
+            // Category filtering functionality
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const appCards = document.querySelectorAll('.app-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button styling
+                    categoryBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-white');
+                        b.classList.add('bg-white', 'text-dark', 'hover:shadow-md');
+                    });
+                    this.classList.remove('bg-white', 'text-dark', 'hover:shadow-md');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    const category = this.textContent.trim();
+                    
+                    // Filter applications
+                    appCards.forEach(card => {
+                        if (category === 'All Applications' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal functionality (only for admins)
+            const modal = document.getElementById('addAppModal');
+            const closeModal = document.getElementById('closeModal');
+            const cancelAdd = document.getElementById('cancelAdd');
+            const addAppForm = document.getElementById('addAppForm');
+            const modalContent = document.querySelector('#addAppModal > div');
+            
+            function openModal() {
+                if (userRole === 'HR Admin') {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                    // Add animation
+                    setTimeout(() => {
+                        modalContent.classList.remove('scale-95', 'opacity-0');
+                        modalContent.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                }
+            }
+            
+            function closeModalFunc() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+            
+            if (userRole === 'HR Admin') {
+                addAppBtn.addEventListener('click', openModal);
+                closeModal.addEventListener('click', closeModalFunc);
+                cancelAdd.addEventListener('click', closeModalFunc);
+                
+                // Close modal when clicking outside
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModalFunc();
+                    }
+                });
+                
+                // Form submission
+                addAppForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // In a real application, you would send this data to a server
+                    alert('Application added successfully!');
+                    closeModalFunc();
+                    addAppForm.reset();
+                });
+            }
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow');
+                } else {
+                    header.classList.remove('shadow');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    
